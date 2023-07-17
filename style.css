@@ -1,0 +1,847 @@
+#logo {
+  max-width:50%;
+  display:block;
+  margin:0 auto;
+  font-size: 25px;
+  position: relative;
+  bottom: 5px;
+}
+
+  body {
+    margin: 0;
+    background-color: #fbfaf5;
+    color: #000b00;
+  }
+
+  header {
+    height: 60px;
+    width: 100%;
+    padding: 0px 15px;
+    background-color: #fef4f4;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    display: flex;
+  } 
+
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #a9a9a9;
+    text-align: center;
+  }
+
+  a {
+    color: #000b00;
+    text-decoration: none;
+  }
+
+nav{
+ width: 100%;
+ height: 70px;
+ position: relative;
+}
+.drawer{
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: space-between;
+ position: relative;
+ height: 70px;
+ padding: 0 1em;
+}
+
+/*ナビゲーション部分*/
+
+.menu ul li a {
+  display:block;
+  font-weight:bold;
+  padding: 2em;
+  color:#333;
+  text-decoration:none;
+  z-index: 999;
+}
+
+
+.menu ul li a:hover{
+  background-color:rgba(201, 173, 49, 0.5);
+  color:rgb(255, 0, 242);
+}
+
+li {
+  list-style: none;
+}
+
+
+.menu{
+  text-align:center;
+  background-color:rgba(248, 248, 250, 0.925);
+  transition: .5s ease;/*滑らかに表示*/
+  -webkit-transform: translateX(-105%);
+  transform: translateX(-105%);/*左に隠しておく*/
+}
+
+
+/*OPEN時の動き*/
+.menu.open {
+ -webkit-transform: translateX(0%);
+ transform: translateX(-4%);/*中身を表示（右へスライド）*/
+}
+
+/*トグルボタンのスタイルを指定*/
+.Toggle {
+    display: block;
+    position: fixed;    /* bodyに対しての絶対位置指定 */
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    z-index: 3;
+  right:15px;
+}
+ 
+.Toggle span {
+    display: block;
+    position: absolute;
+    width: 50px;
+    border-bottom: solid 4px #333;
+    -webkit-transition: .35s ease-in-out; /*変化の速度を指定*/
+    -moz-transition: .35s ease-in-out;    /*変化の速度を指定*/
+    transition: .35s ease-in-out;     /*変化の速度を指定*/
+ 
+}
+ 
+.Toggle span:nth-child(1) {
+    top:5px;
+}
+ 
+.Toggle span:nth-child(2) {
+    top: 18px;
+}
+ 
+.Toggle span:nth-child(3) {
+    top: 32px;
+}
+ 
+.Toggle.active span:nth-child(1) {
+    top: 18px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+ 
+/* 2番目と3番目のspanを45度に */
+.Toggle.active span:nth-child(2),
+.Toggle.active span:nth-child(3) {
+    top: 18px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+  /* スライダー */
+  @import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:400|Roboto:400,700&display=swap");
+
+*:focus {
+  outline: none !important;
+}
+
+.swiper-container {
+  height: auto;
+  margin: 30px 0 0 0;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* スライダーの角を丸くする */
+.swiper-slide img {
+  width: 50%;
+}
+
+#app {
+  position: relative;
+  z-index: 0;
+  margin-top: 70px;
+}
+
+#title {
+  text-align: center;
+}
+
+.title {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 50px;
+}
+
+.update {
+  text-align: center;
+  font-size: 30px;
+  border-bottom: 3px double red;
+  width: 200px;
+  margin: 10px auto;
+}
+
+.info {
+  text-align: center;
+  position: relative;
+  right: 20px;
+}
+
+.info2{
+  display: inline-block;
+  width: auto;
+}
+
+.info3{
+  display: flex;
+  padding:15px;
+  border-bottom:1px solid #000;
+}
+
+/* はじめにのページ */
+
+.main{
+  margin-left: 20px;
+}
+
+.main_img {
+  width: 350px;
+}
+
+h2.intro {
+  text-align: left;
+}
+
+p.intro {
+  text-align: left;
+}
+
+.article {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.split {
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+.region {
+  color: darkcyan;
+  font-size: 25pt;
+  padding: 0;
+}
+
+.region:hover {
+  color: crimson;
+}
+
+/* 検索 */
+.sea {  
+  background-color: #fff4e1 ;
+  border-radius: 10px;
+  background: #fff4e1;
+  box-shadow: inset 7px 7px 14px #e8decd,
+              inset -7px -7px 14px #fffff5;
+  border: none;
+  width: 350px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  background-color: #ffa500;
+  border-radius: 20px;
+  border: none;
+  color: #fff;
+  width: 70px;
+  height: 35px;
+}
+
+.btn:hover {
+  background-color: #d2691e;
+}
+
+.btn:active {
+  background-color: #87ceeb;
+  position: relative;
+  top: 2px;
+}
+
+
+.cp_ipradio {
+  margin-bottom: -50px;
+}
+
+.cp_ipradio .option-input {
+	position: relative;
+	margin: 0 1rem 0 0;
+}
+.cp_ipradio .option-input:before,
+.cp_ipradio .option-input:after {
+	position: absolute;
+	z-index: 1;
+	top: -0.125rem;
+	left: -0.125rem;
+	width: 1rem;
+	height: 1rem;
+	content: '';
+	-webkit-transition: all 0.3s ease-in-out;
+	        transition: all 0.3s ease-in-out;
+	border-radius: 50%;
+	background: #ffffff;
+}
+.cp_ipradio .option-input:after {
+	z-index: 0;
+	top: -0.25rem;
+	left: -0.25rem;
+	width: 1.25rem;
+	height: 1.25rem;
+	background: #ff7f50;
+}
+.cp_ipradio .option-input:checked:before {
+	-webkit-transform: scale(0, 0);
+	        transform: scale(0, 0);
+	border-width: 0.625rem;
+	border-color: #ff7f50;
+}
+
+.btn {
+  margin-bottom: 100px;
+}
+
+.result {
+  background-color: #ffc0cb;
+  border: 2px solid #db7093;
+  height: 30px;
+  padding-top: 5px;
+}
+
+.success {
+  background-color: #87cefa;
+  border: 2px solid #0000ff;
+  height: 30px;
+  padding-top: 5px;
+}
+
+.s {
+  margin-top: 50px;
+  font-size: 20pt;
+}
+
+.f {
+  font-size: 1.8rem;
+}
+
+.detail {
+  font-size: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.img_style{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+  gap: 10px;
+}
+
+/* 城詳細 */
+th {
+  width: 90px;
+}
+
+.table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-top: solid 1px #778ca3;
+ }
+
+ .table tr:nth-child(2n+1) {
+  background: #f3f3f2;
+ }
+
+ .table th,.table td {
+  padding: 10px;
+  border-bottom: solid 1px #778ca3;
+ }
+
+ .access {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 25px;
+  font-size: 2rem;
+  font-weight: 550;
+  text-decoration:underline double #4CB9F6;;
+ }
+
+ .map {
+  margin-bottom: 100px;
+ }
+
+ .cas_title {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: -50px;
+ }
+
+ .comment {
+  text-align: left;
+ }
+
+ .swiperOptions .swiper-slide img,
+ .swiperThumbs .swiper-slide img{width: 100%;}
+ .swiperThumbs {background-color: #fbfaf5;}
+ .swiperOptions .swiper-slide {text-align: center;}
+
+.swiperThumbs .swiper-slide {
+  text-align: center;
+  padding: 10px;
+}
+
+.swiperThumbs .swiper-slide-active {background-color: #fbfaf5;}
+
+ /* 城一覧のページ */
+ .header_text{
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+ .img_style{
+  display: inline-block;
+  margin: 15px;
+}
+
+ .castle_page{
+  width: 390px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+ 
+ .about {
+  width: 390px;
+  margin-left: auto;
+  margin-right: auto;
+ }
+
+
+/* ここからデスクトップ */
+@media screen and (min-width: 420px) {
+  body {
+    margin: 0;
+    background-color: #fbfaf5;
+    color: #000b00;
+  }
+
+  header {
+    height: 60px;
+    width: 100%;
+    padding: 0px 15px;
+    background-color: #fef4f4;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    display: flex;
+  } 
+
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #a9a9a9;
+    text-align: center;
+  }
+  
+  nav{
+  display: flex;
+
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  #logo {
+    max-width:50%;
+    display:block;
+    margin:0 auto;
+    position: absolute;
+    top: 10px;
+    z-index: 1;
+  }
+  
+  .Toggle{
+  display: none;
+  }
+
+  .menu{
+  width: 100%;
+    background-color: transparent;
+    margin-top:0;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  }
+
+  .menu ul{
+    height: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    position: relative;
+    right: 30px;
+  }
+  .menu ul li a{
+    padding: 0 1em;
+    border-bottom: none;
+  }
+    
+  .menu ul li a:hover{
+    background-color:#fbd26b;
+    color:#005243;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  p {
+    white-space: pre-wrap
+  }
+  
+    /* スライダー */
+    @import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:400|Roboto:400,700&display=swap");
+
+  *:focus {
+    outline: none !important;
+  }
+
+  .swiper-container {
+    height: auto;
+    margin: 30px 0 0 0;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    width: 100%;
+  }
+
+  #app {
+    margin-top: 100px;
+  }
+
+  #title {
+    text-align: center;
+  }
+
+  #logo {
+    font-size: 25px;
+  }
+
+  .title {
+    margin-top: 100px;
+    text-align: center;
+    font-size: 50px;
+  }
+
+  .update {
+    text-align: center;
+    font-size: 30px;
+    border-bottom: 3px double red;
+    width: 200px;
+    margin: 10px auto;
+  }
+
+  .info {
+    text-align: center;
+  }
+
+  .info2{
+    display: inline-block;
+    width: auto;
+  }
+
+  .info3{
+    display: flex;
+    padding:15px;
+    border-bottom:1px solid #000;
+  }
+
+  /* はじめにのページ */
+
+  .wrapper{
+    display: flex;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  
+  .main{
+    float: left;
+    width: 35%;
+    padding: 10px;
+    height:400px;
+  }
+
+  .main_img {
+    width: 550px;
+  }
+  
+  .side{
+    width: 65%;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  
+  h2.intro {
+    text-align: left;
+  }
+  
+  p.intro {
+    text-align: left;
+  }
+  
+  .article {
+    text-align: center;
+    margin-bottom: 100px;
+  }
+
+  .intro {
+    text-align: center;
+  }
+
+  /* .split {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+  } */
+
+  /* .region {
+    color: darkcyan;
+    font-size: 25pt;
+    padding: 0;
+  }
+
+  .region:hover {
+    color: crimson;
+  } */
+
+  /* 検索 */
+.sea {  
+  background-color: #fff4e1 ;
+  border-radius: 10px;
+  background: #fff4e1;
+  box-shadow: inset 7px 7px 14px #e8decd,
+              inset -7px -7px 14px #fffff5;
+  border: none;
+  width: 350px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  background-color: #ffa500;
+  border-radius: 20px;
+  border: none;
+  color: #fff;
+  width: 70px;
+  height: 35px;
+}
+
+.btn:hover {
+  background-color: #d2691e;
+}
+
+.btn:active {
+  background-color: #87ceeb;
+  position: relative;
+  top: 2px;
+}
+
+.cp_ipradio {
+  margin-bottom: -50px;
+}
+
+.cp_ipradio .option-input {
+	position: relative;
+	margin: 0 1rem 0 0;
+}
+.cp_ipradio .option-input:before,
+.cp_ipradio .option-input:after {
+	position: absolute;
+	z-index: 1;
+	top: -0.125rem;
+	left: -0.125rem;
+	width: 1rem;
+	height: 1rem;
+	content: '';
+	-webkit-transition: all 0.3s ease-in-out;
+	        transition: all 0.3s ease-in-out;
+	border-radius: 50%;
+	background: #ffffff;
+}
+.cp_ipradio .option-input:after {
+	z-index: 0;
+	top: -0.25rem;
+	left: -0.25rem;
+	width: 1.25rem;
+	height: 1.25rem;
+	background: #ff7f50;
+}
+.cp_ipradio .option-input:checked:before {
+	-webkit-transform: scale(0, 0);
+	        transform: scale(0, 0);
+	border-width: 0.625rem;
+	border-color: #ff7f50;
+}
+
+.s {
+  margin-top: 50px;
+  font-size: 20pt;
+}
+
+.f {
+  font-size: 1.8rem;
+}
+
+.search{
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-bottom: 20px;
+}
+
+.result {
+  background-color: #ffc0cb;
+  border: 2px solid #db7093;
+  height: 30px;
+  padding-top: 5px;
+}
+
+.success {
+  background-color: #87cefa;
+  border: 2px solid #0000ff;
+  height: 30px;
+  padding-top: 5px;
+}
+
+.detail {
+  font-size: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.parent {
+  display: flex;
+}
+
+/* 城詳細ページ */
+.overall {
+  width: 800px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+th {
+  width: 90px;
+}
+
+.table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-top: solid 1px #778ca3;
+ }
+ .table tr:nth-child(2n+1) {
+  background: #f3f3f2;
+ }
+ .table th,.table td {
+  padding: 10px;
+  border-bottom: solid 1px #778ca3;
+ }
+
+ .cas_title {
+  margin-top: 100px;
+  margin-bottom: -50px;
+ }
+
+ .comment {
+  text-align: left;
+ }
+
+ .access {
+  margin-top: 50px;
+  margin-bottom: 25px;
+  font-size: 2rem;
+  font-weight: 550;
+  text-decoration:underline double #4CB9F6;;
+ }
+
+ .map {
+  margin-bottom: 100px;
+ }
+
+ /* 城一覧のページ */
+ .header_text{
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+ .img_style{
+  display: inline-block;
+  margin: 10px;
+}
+
+ .castle_page{
+  width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+ 
+ .about {
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+ }
+
+.swiperOptions .swiper-slide img,
+.swiperThumbs .swiper-slide img{width: 80%;}
+.swiperThumbs {background-color: #fbfaf5;}
+.swiperOptions .swiper-slide {text-align: center;}
+
+.swiperThumbs .swiper-slide {
+  text-align: center;
+  padding: 10px;
+}
+
+.swiperThumbs .swiper-slide-active {background-color: #fbfaf5;}
+
+}
