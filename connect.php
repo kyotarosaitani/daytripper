@@ -1,8 +1,8 @@
 <?php
 
-$dsn = 'mysql:dbname=LAA1541095-daytripper;host=mysql215.phy.lolipop.lan;charset=utf8';
-$user = 'LAA1541095';
-$password = 'qwer';
+$dsn = 'mysql:dbname=daytripper;host=localhost;charset=utf8';
+$user = 'root';
+$password = '';
 $dbh = new PDO($dsn, $user, $password);
 $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
